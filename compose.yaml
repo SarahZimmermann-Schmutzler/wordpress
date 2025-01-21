@@ -1,0 +1,41 @@
+services:
+
+  wordpress:
+    env_file: .env
+    container_name: wordpress
+    image: wordpress:6.3
+    restart: on-failure
+    ports:
+      - 8080:80
+    environment:
+      # name of the database container (db)
+      WORDPRESS_DB_HOST: db
+      # username for database access
+      WORDPRESS_DB_USER: ${DB_USER}
+      # password for database access
+      WORDPRESS_DB_PASSWORD: ${DB_PASSWORD}
+      # name of the database used by WordPress
+      WORDPRESS_DB_NAME: ${DB_NAME}
+    volumes:
+      - wordpress_volume:/var/www/html
+
+  db:
+    env_file: .env
+    container_name: wordpress_mariadb
+    image: mariadb:10.5
+    restart: always
+    environment:
+      # same variable as WORDPRESS_DB_NAME
+      MYSQL_DATABASE: ${DB_NAME}
+      # same variable as WORDPRESS_DB_USER
+      MYSQL_USER: ${DB_USER}
+      # same variable as WORDPRESS_DB_PASSWORD
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      # password for the root user of the MariaDB database; required for administrative tasks
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - db_volume:/var/lib/mysql
+
+volumes:
+  wordpress_volume:
+  db_volume:
