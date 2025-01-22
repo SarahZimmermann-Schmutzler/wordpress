@@ -135,6 +135,19 @@ Docker offers a possible <a href="https://hub.docker.com/_/wordpress">compose.ya
         ```bash
         docker compose ps
         ```
+    - If no network is defined in the compose file, docker automatically creates one. To check which networks exist:
+        ```bash
+        docker network ls
+        ```
+        - To list which containers are on a network:
+            ```bash
+            docker network inspect <network-name>
+            ```
+            - To check if the wordpress and mariadb container are in the same network:
+                ```bash
+                docker network inspect wordpress_default
+                ```  
+                <img alt="network" src="https://github.com/SarahZimmermann-Schmutzler/wordpress/blob/main/network.png"></img>
 
 3) Check whether the **server is running** correctly:
 - WordPress can be reached under the *IP address of your cloud VM on port 8080*:
