@@ -19,16 +19,17 @@ This Repository was created as part of my training at the **Developer Academy**.
 <a href="https://wordpress.com/de/">WordPress</a> is a content management system (CMS) that allows users to easily create, manage and publish websites and blogs - without extensive programming knowledge. It is one of the most popular CMS worldwide and powers over 40% of all websites on the Internet (as of 2023).
 
 ### Containerize WordPress
-Docker offers a possible <a href="https://hub.docker.com/_/wordpress">compose.yaml</a> file for the WordPress containerization. It shows that two containers are needed: one for the WordPress application and one for the database.  
-The compose file uses the `wordpress base-image` which is provided by the official WordPress community and already contains all the essential components to run WordPress:
-- slim operating system
-- Apache (web server)
-- PHP (including necessary extensions for WordPress)
-- WordPress files
+Docker offers a possible <a href="https://hub.docker.com/_/wordpress">compose.yaml</a> file for the WordPress containerization. It shows that **two containers are needed**: one for the WordPress application and one for the database.  
 
-For the database-container a MySQL or **MariaDB** database is recommended. In this repository the latter is used here - the open source focused and independent alternative to MySQL. Provided and maintained by the MariaDB community there is a pre-build base-image. It contains, in addition to the necessary operating system:
-- MariaDB server
-- Basic configurations required for operation
+- The compose file uses the `wordpress base-image` which is provided by the official WordPress community and already contains all the essential components to run the WordPress application:
+    - slim operating system
+    - Apache (web server)
+    - PHP (including necessary extensions for WordPress)
+    - WordPress files
+
+- For the database-container a MySQL or **MariaDB** database is recommended. In this repository the latter is used here - the open source focused and independent alternative to MySQL. Provided and maintained by the MariaDB community there is a pre-build base-image. It contains, in addition to the necessary operating system:
+    - MariaDB server
+    - Basic configurations required for operation
 
 ## Getting Started
 0) <a href="https://docs.github.com/de/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo">Fork</a> the project to your namespace, if you want to make changes or open a <a href="https://docs.github.com/de/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">Pull Request</a>.
@@ -141,12 +142,12 @@ For the database-container a MySQL or **MariaDB** database is recommended. In th
 
 - When you open the page you will be redirected to the **installation page** and can now start creating your account:  
 
-<img alt="install.php" src="https://github.com/SarahZimmermann-Schmutzler/wordpress/blob/main/install.png"></img>
+    <img alt="install.php" src="https://github.com/SarahZimmermann-Schmutzler/wordpress/blob/main/install.png"></img>
 
 - After the setting, a sample blog page appears:  
 
-<img alt="example blog entry" src="https://github.com/SarahZimmermann-Schmutzler/wordpress/blob/main/example.png"></img>
+    <img alt="example blog entry" src="https://github.com/SarahZimmermann-Schmutzler/wordpress/blob/main/example.png"></img>
 
 - Unless you have already written your first entry and chose a layout:  
 
-<img alt="first entry" src="https://github.com/SarahZimmermann-Schmutzler/wordpress/blob/main/entry.png"></img>
+    <img alt="first entry" src="https://github.com/SarahZimmermann-Schmutzler/wordpress/blob/main/entry.png"></img>
