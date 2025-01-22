@@ -119,31 +119,31 @@ Docker offers a possible <a href="https://hub.docker.com/_/wordpress">compose.ya
     ```bash
     docker compose up --build -d
     ```
-    - To view the log files:
+    - To view the **log files**:
         ```bash
         docker compose logs -f
         ```
-    - To stop the container:
+    - To **stop** the container:
         ```bash
         docker compose stop <container-name>
         ```
-    - To delete the container:
+    - To **delete** the container:
         ```bash
         docker compose down <container-name>
         ```
-    - To list all containers that are operatet by Docker Compose:
+    - To **list all containers** that are operatet by Docker Compose:
         ```bash
         docker compose ps
         ```
-    - If no network is defined in the compose file, docker automatically creates one. To check which networks exist:
+    - If no network is defined in the compose file, docker automatically creates one. To check which **networks** exist:
         ```bash
         docker network ls
         ```
-        - To list which containers are on a network:
+        - To list **which containers are on a network**:
             ```bash
             docker network inspect <network-name>
             ```
-            - To check if the wordpress and mariadb container are in the same network:
+            - <ins>To check if the wordpress and mariadb container are in the same network</ins>:
                 ```bash
                 docker network inspect wordpress_default
                 ```  
