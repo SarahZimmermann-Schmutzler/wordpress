@@ -38,6 +38,8 @@ Docker offers a possible [compose.yaml](https://hub.docker.com/_/wordpress) file
 
 ## Quickstart
 
+This section provides a fast and **minimal setup guide** for using the tools in this repository. For a more **in-depth understanding** and additional options, please refer to the [Usage](#usage) section.
+
 0) [Fork](https://docs.github.com/de/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) the project to your namespace, if you want to make changes or open a [Pull Request](https://docs.github.com/de/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 
 1. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) the project to your platform if you just want to use it:
@@ -84,51 +86,7 @@ Docker offers a possible [compose.yaml](https://hub.docker.com/_/wordpress) file
 
 ### Containerization with Docker Compose
 
-1. The [`compose.yaml`](./compose.yaml) is responsible for managing and orchestrating the WordPress and the Database container. It defines what configurations they should have:
-
-    ```bash
-    services:
-
-        wordpress:
-            env_file: .env
-            container_name: wordpress
-            image: wordpress:6.3
-            restart: on-failure
-            ports:
-                - 8080:80
-            environment:
-                # name of the database container (db)
-                WORDPRESS_DB_HOST: db
-                # username for database access
-                WORDPRESS_DB_USER: ${DB_USER}
-                # password for database access
-                WORDPRESS_DB_PASSWORD: ${DB_PASSWORD}
-                # name of the database used by WordPress
-                WORDPRESS_DB_NAME: ${DB_NAME}
-            volumes:
-                - wordpress_volume:/var/www/html
-
-        db:
-            env_file: .env
-            container_name: wordpress_mariadb
-            image: mariadb:10.5
-            restart: always
-            environment:
-                # same variable as WORDPRESS_DB_NAME
-                MYSQL_DATABASE: ${DB_NAME}
-                # same variable as WORDPRESS_DB_USER
-                MYSQL_USER: ${DB_USER}
-                # same variable as WORDPRESS_DB_PASSWORD
-                MYSQL_PASSWORD: ${DB_PASSWORD}
-                # password for the root user of the MariaDB database; required for administrative tasks
-                MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-            volumes:
-                - db_volume:/var/lib/mysql
-
-    volumes:
-        wordpress_volume:
-        db_volume:
-    ```
+1. The [`compose.yaml`](./compose.yaml) is responsible for managing and orchestrating the WordPress and the Database container. It defines what configurations they should have.
 
 1. **Build and start the container** in the background (detached mode):
 
