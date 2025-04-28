@@ -136,7 +136,7 @@ This section provides a fast and **minimal setup guide** for using the tools in 
                 docker network inspect wordpress_default
                 ```  
 
-                ![network](./network.png)
+                ![network](https://raw.githubusercontent.com/SarahZimmermann-Schmutzler/wordpress/main/network.png)
 
 1. Check whether the **server is running** correctly:
 
