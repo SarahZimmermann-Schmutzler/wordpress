@@ -49,7 +49,7 @@ This section provides a fast and **minimal setup guide** for using the tools in 
     git clone git@github.com:SarahZimmermann-Schmutzler/wordpress.git
     ```
 
-1. Create an **.enf file** in the project directory. The required variables are provided in [example.env](./example.env).
+1. Create an **.enf file** in the project directory. The required variables are provided in [example.env](https://github.com/SarahZimmermann-Schmutzler/wordpress/blob/main/example.env).
 
 1. **Build and start the container** in the background (detached mode):
 
@@ -75,7 +75,7 @@ This section provides a fast and **minimal setup guide** for using the tools in 
     git clone git@github.com:SarahZimmermann-Schmutzler/wordpress.git
     ```
 
-1. Create an **.enf file** in the project directory. The required variables are provided in [example.env](./example.env)</a>.  
+1. Create an **.enf file** in the project directory. The required variables are provided in [example.env](https://github.com/SarahZimmermann-Schmutzler/wordpress/blob/main/example.env)</a>.  
 
     ```bash
     DB_USER=
@@ -86,7 +86,7 @@ This section provides a fast and **minimal setup guide** for using the tools in 
 
 ### Containerization with Docker Compose
 
-1. The [`compose.yaml`](./compose.yaml) is responsible for managing and orchestrating the WordPress and the Database container. It defines what configurations they should have.
+1. The [`compose.yaml`](https://github.com/SarahZimmermann-Schmutzler/wordpress/blob/main/compose.yaml) is responsible for managing and orchestrating the WordPress and the Database container. It defines what configurations they should have.
 
 1. **Build and start the container** in the background (detached mode):
 
@@ -145,12 +145,12 @@ This section provides a fast and **minimal setup guide** for using the tools in 
 
 * When you open the page you will be redirected to the **installation page** and can now start creating your account:  
 
-    ![install.php](./install.png)
+    ![install.php](https://raw.githubusercontent.com/SarahZimmermann-Schmutzler/wordpress/main/install.png)
 
 * After the setting, a sample blog page appears:  
 
-    ![example blog entry](./example.png)
+    ![example blog entry](https://raw.githubusercontent.com/SarahZimmermann-Schmutzler/wordpress/main/example.png)
 
 * Unless you have already written your first entry and chose a layout:  
 
-    ![first entry](./entry.png)
+    ![first entry](https://raw.githubusercontent.com/SarahZimmermann-Schmutzler/wordpress/main/entry.png)
